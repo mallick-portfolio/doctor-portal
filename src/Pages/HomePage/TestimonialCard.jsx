@@ -2,7 +2,7 @@ import React from "react";
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div class="card p-4 card-compact w-96 bg-base-100 shadow-xl">
+    <div class="card sm:p-4 card-compact w-96 bg-base-100 shadow-xl">
       <div class="card-body">
         <p>
          {testimonial.des}

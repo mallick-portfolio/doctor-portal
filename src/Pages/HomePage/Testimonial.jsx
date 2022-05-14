@@ -67,21 +67,23 @@ const Testimonial = () => {
         grabCursor={true}
         breakpoints={{
           // when window width is >= 320px
+          100: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
           320: {
             slidesPerView: 1,
             spaceBetween: 0,
           },
-          // when window width is >= 480px
           480: {
             slidesPerView: 1,
             spaceBetween: 50,
           },
-          // when window width is >= 640px
           640: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 50,
           },
-          768: {
+          769: {
             slidesPerView: 2,
             spaceBetween: 50,
           },

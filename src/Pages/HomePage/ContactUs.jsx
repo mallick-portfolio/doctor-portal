@@ -15,7 +15,7 @@ const ContactUs = () => {
           Services We Provide
         </h2>
       </div>
-      <div className="text-center">
+      <div className="text-center px-2 sm:px-0">
         <div className="mb-2">
           <input
             type="text"
