@@ -1,4 +1,5 @@
 import React from 'react'
+import Appoinment from './Appoinment.jsx'
 import Banner from './Banner.jsx'
 import ContactLocation from './ContactLocation'
 import DentalCare from './DentalCare.jsx'
@@ -10,6 +11,7 @@ const HomePage = () => {
       <ContactLocation />
       <Services />
       <DentalCare />
+      <Appoinment />
     </div>
   )
 }

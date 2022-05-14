@@ -4,7 +4,7 @@ import chair from "../../assets/images/chair.png";
 import bannerBg from '../../assets/images/bg.png'
 const Banner = () => {
   return (
-    <div className="hero min-h-screen" style={{  
+    <div className="hero min-h-screen mx-auto" style={{  
       backgroundImage: `url(${bannerBg})`,
       backgroundPosition: 'center',
       backgroundSize: 'cover',
