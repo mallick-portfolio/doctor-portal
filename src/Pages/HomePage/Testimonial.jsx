@@ -1,0 +1,90 @@
+import React from "react";
+import { EffectCoverflow, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import people1 from "../../assets/images/people1.png";
+import people2 from "../../assets/images/people2.png";
+import people3 from "../../assets/images/people3.png";
+import TestimonialCard from "./TestimonialCard.jsx";
+
+const Testimonial = () => {
+  const testimonials = [
+    {
+      _id: 1,
+      name: "Winson Herry",
+      location: "California",
+      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
+      img: people1,
+    },
+    {
+      _id: 2,
+      name: "Winson Herry",
+      location: "California",
+      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
+      img: people2,
+    },
+    {
+      _id: 3,
+      name: "Winson Herry",
+      location: "California",
+      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
+      img: people3,
+    },
+    {
+      _id: 4,
+      name: "Winson Herry",
+      location: "California",
+      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
+      img: people1,
+    },
+    {
+      _id: 5,
+      name: "Winson Herry",
+      location: "California",
+      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
+      img: people2,
+    },
+    {
+      _id: 6,
+      name: "Winson Herry",
+      location: "California",
+      des: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
+      img: people3,
+    },
+  ];
+  return (
+    <div className="container my-28">
+      <h4 className="text-xl text-secondary">Testimonial</h4>
+      <h2 className="text-3xl text-neutral mb-12">
+        What Our Patients SaysServices We Provide
+      </h2>
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={3}
+        loop={true}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        {testimonials.map((testimonial) => (
+          <SwiperSlide key={testimonial._id} >
+            <TestimonialCard testimonial={testimonial} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};
+
+export default Testimonial;

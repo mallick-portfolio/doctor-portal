@@ -9,7 +9,7 @@ const Banner = () => {
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'scroll'
+      backgroundAttachment: 'fixed'
     }}>
       <section className="hero-content flex-col lg:flex-row-reverse">
         <img className="min-w-sm lg:w-1/2" src={chair} alt="doctor chair" />

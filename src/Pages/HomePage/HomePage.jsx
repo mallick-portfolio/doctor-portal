@@ -4,6 +4,7 @@ import Banner from './Banner.jsx'
 import ContactLocation from './ContactLocation'
 import DentalCare from './DentalCare.jsx'
 import Services from './Services.jsx'
+import Testimonial from './Testimonial.jsx'
 const HomePage = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Services />
       <DentalCare />
       <Appoinment />
+      <Testimonial />
     </div>
   )
 }

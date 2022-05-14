@@ -4,12 +4,12 @@ import doctor from '../../assets/images/doctor-small.png'
 import appointment from '../../assets/images/appointment.png'
 const Appoinment = () => {
   return (
-    <div class="" style={{  
+    <div class="container" style={{  
       backgroundImage: `url(${appointment})`,
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'scroll'
+      backgroundAttachment: 'fixed'
     }}>
       <div class="sm:flex items-center my-28">
         <img
