@@ -1,9 +1,10 @@
 import React from 'react'
+import Banner from './Banner.jsx'
 
 const HomePage = () => {
   return (
     <div>
-      <h1>hello world</h1>
+      <Banner />
     </div>
   )
 }
