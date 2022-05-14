@@ -27,7 +27,7 @@ const ContactLocation = () => {
     },
   ];
   return (
-    <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-28 mx-auto">
+    <section className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-28 mx-auto">
       {data.map((ser) => (
         <>
           <div class={`hero ${ser.bgClass} rounded-2xl`}>
@@ -46,7 +46,7 @@ const ContactLocation = () => {
           </div>
         </>
       ))}
-    </div>
+    </section>
   );
 };
 

@@ -11,7 +11,7 @@ const Banner = () => {
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'scroll'
     }}>
-      <div class="hero-content flex-col lg:flex-row-reverse">
+      <section class="hero-content flex-col lg:flex-row-reverse">
         <img className="min-w-sm lg:w-1/2" src={chair} alt="doctor chair" />
         <div>
           <h1 class="text-5xl font-bold text-neutral">Your New Smile Starts Here</h1>
@@ -22,7 +22,7 @@ const Banner = () => {
           </p>
           <CommonBtn>GET STARTED</CommonBtn>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
