@@ -9,6 +9,8 @@ import people2 from "../../assets/images/people2.png";
 import people3 from "../../assets/images/people3.png";
 import TestimonialCard from "./TestimonialCard.jsx";
 
+import "./testimonial.css";
+
 const Testimonial = () => {
   const testimonials = [
     {
@@ -63,8 +65,32 @@ const Testimonial = () => {
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+          900: {
+            slidesPerView: 3,
+            spaceBetween: 70,
+          },
+        }}
         centeredSlides={true}
-        slidesPerView={3}
         loop={true}
         coverflowEffect={{
           rotate: 50,
@@ -78,7 +104,7 @@ const Testimonial = () => {
         className="mySwiper"
       >
         {testimonials.map((testimonial) => (
-          <SwiperSlide key={testimonial._id} >
+          <SwiperSlide key={testimonial._id}>
             <TestimonialCard testimonial={testimonial} />
           </SwiperSlide>
         ))}
