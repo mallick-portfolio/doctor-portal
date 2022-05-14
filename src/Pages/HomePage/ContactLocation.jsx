@@ -29,22 +29,19 @@ const ContactLocation = () => {
   return (
     <section className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-28 mx-auto">
       {data.map((ser) => (
-        <>
-          <div class={`hero ${ser.bgClass} rounded-2xl`}>
-            <div class="hero-content flex-col lg:flex-row">
-              <img
-                src={ser.img}
-                class="max-w-sm rounded-lg shadow-2xl" alt={ser.title}
-              />
-              <div>
-                <h1 class="text-2xl text-white font-bold">{ser.title}</h1>
-                <p class="py-1 md:py-2 lg:py-3 text-white">
-                  {ser.des}
-                </p>
-              </div>
+        <div key={ser._id} className={`hero ${ser.bgClass} rounded-2xl`}>
+          <div className="hero-content flex-col lg:flex-row">
+            <img
+              src={ser.img}
+              className="max-w-sm rounded-lg shadow-2xl"
+              alt={ser.title}
+            />
+            <div>
+              <h1 className="text-2xl text-white font-bold">{ser.title}</h1>
+              <p className="py-1 md:py-2 lg:py-3 text-white">{ser.des}</p>
             </div>
           </div>
-        </>
+        </div>
       ))}
     </section>
   );
