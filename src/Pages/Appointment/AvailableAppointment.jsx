@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import AppointmentDoctor from "./AppointmentDoctor.jsx";
+import BookingModal from "./BookingModal.jsx";
 
-const AvailableAppointment = ({ serchCategory }) => {
+const AvailableAppointment = ({ serchCategory, date }) => {
   const [treatment, setTreatment] = useState(null);
 
   useEffect(() => {
@@ -27,6 +28,9 @@ const AvailableAppointment = ({ serchCategory }) => {
         {treatment?.dataslot.map((data, index) => (
           <AppointmentDoctor key={index} data={data} />
         ))}
+      </div>
+      <div>
+        <BookingModal date={date} treatment={treatment} />
       </div>
     </div>
   );

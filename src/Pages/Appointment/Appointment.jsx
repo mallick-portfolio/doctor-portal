@@ -15,7 +15,7 @@ const Appointment = () => {
     <div className="">
       <AppointmentBanner date={date} setDate={setDate} />
       <AppointmentServices getCategory={getCategory} date={date} />
-      <AvailableAppointment serchCategory={serchCategory} />
+      <AvailableAppointment date={date} serchCategory={serchCategory} />
       <Footer />
     </div>
   );

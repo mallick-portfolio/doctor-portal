@@ -6,7 +6,7 @@ const Login = () => {
       <div className="lg:w-1/3 px-4 py-6 rounded-md shadow-2xl">
         <h3 className="text-center text-2xl mb-3">Login</h3>
         <div className="mb-2">
-          <p class="label-text mb-2">Email</p>
+          <p className="label-text mb-2">Email</p>
           <input
             type="email"
             placeholder="email"
@@ -14,7 +14,7 @@ const Login = () => {
           />
         </div>
         <div className="mb-2">
-          <p class="label-text mb-2">Password</p>
+          <p className="label-text mb-2">Password</p>
           <input
             type="password"
             placeholder="Password"
@@ -35,7 +35,7 @@ const Login = () => {
             <span className="text-secondary">Create new account</span>
           </p>
         </div>
-        <div class="divider">OR</div>
+        <div className="divider">OR</div>
         <button className="btn text-center bg-white text-neutral border-black hover:text-white w-full">CONTINUE WITH GOOGLE</button>
       </div>
     </div>
