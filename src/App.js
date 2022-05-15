@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Appointment from "./Pages/Test/Appointment.jsx";
+import Appointment from "./Pages/Appointment/Appointment.jsx";
 import HomePage from "./Pages/HomePage/HomePage.jsx";
 import Navbar from "./Pages/HomePage/Navbar.jsx";
 import Login from "./Pages/Login/Login.jsx";
