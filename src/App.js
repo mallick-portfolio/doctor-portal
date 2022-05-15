@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Appointment from "./Pages/Appointment/Appointment.jsx";
+import Appointment from "./Pages/Test/Appointment.jsx";
 import HomePage from "./Pages/HomePage/HomePage.jsx";
 import Navbar from "./Pages/HomePage/Navbar.jsx";
+import Login from "./Pages/Login/Login.jsx";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/appoinment" element={<Appointment />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );
