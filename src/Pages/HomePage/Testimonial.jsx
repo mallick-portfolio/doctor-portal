@@ -1,5 +1,5 @@
 import React from "react";
-import { EffectCoverflow, Pagination } from "swiper";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -65,6 +65,10 @@ const Testimonial = () => {
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
         breakpoints={{
           // when window width is >= 320px
           100: {
@@ -102,7 +106,7 @@ const Testimonial = () => {
           slideShadows: true,
         }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
       >
         {testimonials.map((testimonial) => (

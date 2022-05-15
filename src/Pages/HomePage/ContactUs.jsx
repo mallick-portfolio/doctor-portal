@@ -20,19 +20,19 @@ const ContactUs = () => {
           <input
             type="text"
             placeholder="Email address"
-            class="input input-bordered w-full max-w-sm"
+            className="input input-bordered w-full max-w-sm"
           />
         </div>
         <div className="mb-2">
           <input
             type="text"
             placeholder="Subject"
-            class="input input-bordered w-full max-w-sm"
+            className="input input-bordered w-full max-w-sm"
           />
         </div>
         <div className="mb-2">
           <textarea
-            class="textarea textarea-bordered w-full max-w-sm"
+            className="textarea textarea-bordered w-full max-w-sm"
             placeholder="Your message"
           ></textarea>
         </div>
@@ -40,7 +40,7 @@ const ContactUs = () => {
           <input
             type="submit"
             value={"Submit"}
-            class="btn bg-gradient-to-r text-white from-secondary to-primary border-0"
+            className="btn bg-gradient-to-r text-white from-secondary to-primary border-0"
           />
         </div>
       </div>

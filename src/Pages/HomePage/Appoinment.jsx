@@ -4,23 +4,23 @@ import doctor from '../../assets/images/doctor-small.png'
 import appointment from '../../assets/images/appointment.png'
 const Appoinment = () => {
   return (
-    <div class="container" style={{  
+    <div className="container" style={{  
       backgroundImage: `url(${appointment})`,
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed'
     }}>
-      <div class="sm:flex items-center my-28">
+      <div className="sm:flex items-center my-28">
         <img
           src={doctor}
-          class="max-w-lg -mt-20 flex-1 hidden md:block"
+          className="max-w-lg -mt-20 flex-1 hidden md:block"
           alt=""
         />
-        <div className="flex-1 p-6 sm:p-0 text-white">
-          <h1 class="text-xl font-bold text-primary">Appointment</h1>
-          <h1 class="text-5xl font-bold">Make an appointment Today</h1>
-          <p class="py-6">
+        <div className="flex-1 p-2 sm:p-0 text-white">
+          <h1 className="text-xl font-bold text-primary">Appointment</h1>
+          <h1 className="font-bold text-3xl sm:text-5xl">Make an appointment Today</h1>
+          <p className="py-6">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsumis that it has a more-or-less normal
