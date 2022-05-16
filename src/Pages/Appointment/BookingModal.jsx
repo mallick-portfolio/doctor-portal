@@ -8,10 +8,8 @@ const BookingModal = ({ appoionData, date, setAppoionData }) => {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
   } = useForm();
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const onSubmit = async (data, e) => {
     console.log(data);
     setAppoionData(null)

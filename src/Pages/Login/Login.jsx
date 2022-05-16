@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -9,9 +12,13 @@ import Loading from "../Shared/Loading";
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, upError] =
+    useSendPasswordResetEmail(auth);
+
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors },
   } = useForm();
 
@@ -19,13 +26,8 @@ const Login = () => {
   let location = useLocation();
 
   let from = location.state?.from?.pathname || "/";
-  useEffect(() => {
-    if (error) {
-      toast("Your email or password is not correct. Please try again");
-      navigate("/login");
-    }
-  }, [error, navigate]);
-  if (loading) {
+
+  if (loading || sending) {
     <Loading />;
   }
   useEffect(() => {
@@ -35,6 +37,20 @@ const Login = () => {
     }
   }, [from, navigate, user]);
 
+  useEffect(() => {
+    if (error) {
+      toast("Your email or password is not correct. Please try again");
+      navigate(from, { replace: true });
+    }
+  }, [error, from, navigate]);
+  useEffect(() => {
+    if (upError) {
+      toast("Verified Failed. Please try again");
+      navigate(from, { replace: true });
+    }
+  }, [from, navigate, upError]);
+
+  // handle form submit
   const onSubmit = async (data, e) => {
     await signInWithEmailAndPassword(data.email, data.password);
   };
@@ -64,7 +80,7 @@ const Login = () => {
           <input
             type="password"
             {...register("password", {
-              required: true || "Your Email Is Required",
+              required: "Your Password Is Required",
             })}
             placeholder="Password"
             className="input input-bordered w-full max-w-sm"
@@ -73,7 +89,16 @@ const Login = () => {
             <p className="text-red-500">{errors.password?.message}</p>
           )}
         </div>
-        <p className="text-sm mb-4">Forgot Password ?</p>
+        <input
+          onClick={async () => {
+            const email = getValues("email");
+            await sendPasswordResetEmail(email);
+          }}
+          type={"submit"}
+          value="Forgot Password ?"
+          className="text-sm cursor-pointer text-secondary my-4"
+        />
+
         <div className="mb-2">
           <input
             type="submit"
