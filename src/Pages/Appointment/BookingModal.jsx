@@ -28,7 +28,7 @@ const BookingModal = ({ appoionData, date, setAppoionData }) => {
             />
           </div>
           <div className="mb-2  text-center">
-            <select class="select select-bordered w-full max-w-sm">
+            <select className="select select-bordered w-full max-w-sm">
               {appoionData &&
                 appoionData.map((data, i) => (
                   <option value={data} key={i}>
