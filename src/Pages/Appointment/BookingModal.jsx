@@ -1,12 +1,17 @@
 import { format } from "date-fns";
 import React from "react";
 
-const BookingModal = ({ treatment, date }) => {
+const BookingModal = ({ appoionData, date, setAppoionData }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setAppoionData(null);
+  };
+
   return (
     <div>
       <input type="checkbox" id="booking-modal" className="modal-toggle" />
       <div className="modal modal-bottom sm:modal-middle">
-        <div className="modal-box">
+        <form onSubmit={handleSubmit} className="modal-box">
           <label
             htmlFor="booking-modal"
             className="btn btn-sm btn-circle absolute right-2 top-2"
@@ -23,11 +28,14 @@ const BookingModal = ({ treatment, date }) => {
             />
           </div>
           <div className="mb-2  text-center">
-            <input
-              disabled
-              defaultValue={treatment?.dataslot[1]?.slots[0]}
-              className="input input-bordered w-full max-w-sm"
-            />
+            <select class="select select-bordered w-full max-w-sm">
+              {appoionData &&
+                appoionData.map((data, i) => (
+                  <option value={data} key={i}>
+                    {data}
+                  </option>
+                ))}
+            </select>
           </div>
           <div className="mb-2  text-center">
             <input
@@ -51,9 +59,13 @@ const BookingModal = ({ treatment, date }) => {
             />
           </div>
           <div className="mb-2 mx-10">
-            <input type="submit" value="Submit" className="btn w-full bg-accent border-0" />
+            <input
+              type="submit"
+              value="Submit"
+              className="btn w-full bg-accent border-0"
+            />
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import BookingModal from "./BookingModal.jsx";
 
 const AvailableAppointment = ({ serchCategory, date }) => {
   const [treatment, setTreatment] = useState(null);
-
+  const [appoionData, setAppoionData] = useState(null);
   useEffect(() => {
     const loadServices = async () => {
       const selectedData = await axios.get(
@@ -26,12 +26,10 @@ const AvailableAppointment = ({ serchCategory, date }) => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {treatment?.dataslot.map((data, index) => (
-          <AppointmentDoctor key={index} data={data} />
+          <AppointmentDoctor date={date} setAppoionData={setAppoionData} key={index} data={data} />
         ))}
       </div>
-      <div>
-        <BookingModal date={date} treatment={treatment} />
-      </div>
+      <div>{appoionData && <BookingModal date={date} appoionData={appoionData} setAppoionData={setAppoionData} />}</div>
     </div>
   );
 };
