@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -20,21 +20,22 @@ const Register = () => {
   } = useForm();
 
   const navigate = useNavigate();
+  useEffect(() => {
+    if (user) {
+      toast.success("Your SignUp Successfull");
+      navigate("/");
+    }
+  }, [navigate, user]);
 
-  if (error || uError) {
-    return (
-      <div>
-        <p>Error: {error.message}</p>
-      </div>
-    );
-  }
+  useEffect(()=> {
+    if (error || uError) {
+      toast.warning('Your SignUp failed. Please try again')
+    }
+  }, [error, uError])
   if (loading || updating) {
     return <Loading />;
   }
-  if (user) {
-    toast.success("Your SignUp Successfull");
-    navigate("/");
-  }
+
   const onSubmit = async (data, e) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });

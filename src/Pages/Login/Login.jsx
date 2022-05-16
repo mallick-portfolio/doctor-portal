@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init.js";
-import Loading from '../Shared/Loading'
-
+import Loading from "../Shared/Loading";
 
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -15,26 +15,25 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
-
   let navigate = useNavigate();
   let location = useLocation();
 
   let from = location.state?.from?.pathname || "/";
-  if (error) {
-    return (
-      <div>
-        <p>Error: {error.message}</p>
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (error) {
+      toast("Your email or password is not correct. Please try again");
+      navigate("/login");
+    }
+  }, [error, navigate]);
   if (loading) {
-    return <Loading />
+    <Loading />;
   }
-  if (user) {
+  useEffect(() => {
     if (user) {
+      toast("Login Successfull");
       navigate(from, { replace: true });
     }
-  }
+  }, [from, navigate, user]);
 
   const onSubmit = async (data, e) => {
     await signInWithEmailAndPassword(data.email, data.password);
