@@ -27,17 +27,19 @@ const Register = () => {
     }
   }, [navigate, user]);
 
-  useEffect(()=> {
+  useEffect(() => {
     if (error || uError) {
-      toast.warning('Your SignUp failed. Please try again')
+      toast.warning("Your SignUp failed. Please try again");
     }
-  }, [error, uError])
+  }, [error, uError]);
   if (loading || updating) {
     return <Loading />;
   }
 
   const onSubmit = async (data, e) => {
-    await createUserWithEmailAndPassword(data.email, data.password);
+    await createUserWithEmailAndPassword(data.email, data.password, {
+      sendEmailVerification: true,
+    });
     await updateProfile({ displayName: data.name });
   };
   return (

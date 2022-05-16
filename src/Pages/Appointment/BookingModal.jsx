@@ -1,17 +1,27 @@
 import { format } from "date-fns";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useForm } from "react-hook-form";
+import auth from "../../firebase.init.js";
 
 const BookingModal = ({ appoionData, date, setAppoionData }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setAppoionData(null);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const [user, loading, error] = useAuthState(auth);
+  const onSubmit = async (data, e) => {
+    console.log(data);
+    setAppoionData(null)
   };
 
   return (
     <div>
       <input type="checkbox" id="booking-modal" className="modal-toggle" />
       <div className="modal modal-bottom sm:modal-middle">
-        <form onSubmit={handleSubmit} className="modal-box">
+        <form onSubmit={handleSubmit(onSubmit)} className="modal-box">
           <label
             htmlFor="booking-modal"
             className="btn btn-sm btn-circle absolute right-2 top-2"
@@ -28,7 +38,13 @@ const BookingModal = ({ appoionData, date, setAppoionData }) => {
             />
           </div>
           <div className="mb-2  text-center">
-            <select className="select select-bordered w-full max-w-sm">
+            <select
+              {...register("time", {
+                required: true,
+                value: appoionData[0],
+              })}
+              className="select select-bordered w-full max-w-sm"
+            >
               {appoionData &&
                 appoionData.map((data, i) => (
                   <option value={data} key={i}>
@@ -39,6 +55,8 @@ const BookingModal = ({ appoionData, date, setAppoionData }) => {
           </div>
           <div className="mb-2  text-center">
             <input
+              disabled
+              defaultValue={user?.displayName}
               type="text"
               placeholder="Full name"
               className="input input-bordered w-full max-w-sm"
@@ -46,18 +64,25 @@ const BookingModal = ({ appoionData, date, setAppoionData }) => {
           </div>
           <div className="mb-2  text-center">
             <input
-              type="text"
-              placeholder="Phone Number"
-              className="input input-bordered w-full max-w-sm"
-            />
-          </div>
-          <div className="mb-2  text-center">
-            <input
+              disabled
+              defaultValue={user?.email}
               type="email"
               placeholder="Email"
               className="input input-bordered w-full max-w-sm"
             />
           </div>
+          <div className="mb-2  text-center">
+            <input
+              {...register("phone", {
+                required: true,
+                value: "",
+              })}
+              type="text"
+              placeholder="Phone Number"
+              className="input input-bordered w-full max-w-sm"
+            />
+          </div>
+
           <div className="mb-2 mx-10">
             <input
               type="submit"
