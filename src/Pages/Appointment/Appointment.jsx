@@ -10,7 +10,7 @@ const Appointment = () => {
   const getCategory = (name) => {
     setSearchCategory(name)
   }
-  
+   
   return (
     <div className="">
       <AppointmentBanner date={date} setDate={setDate} />

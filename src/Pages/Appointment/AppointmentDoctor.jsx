@@ -24,7 +24,7 @@ const AppointmentDoctor = ({ data, setAppoionData }) => {
                   : "bg-neutral"
               } border-0`}
             >
-              open modal
+              open modal 
             </label>
           </button>
         </div>

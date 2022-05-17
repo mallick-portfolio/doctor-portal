@@ -31,7 +31,7 @@ const BookingModal = ({ appoionData, date, setAppoionData }) => {
           <div className="mb-2  text-center">
             <input
               disabled
-              defaultValue={format(date, "PP")}
+              value={format(date, "PP")}
               className="input input-bordered w-full max-w-sm"
             />
           </div>
@@ -54,7 +54,7 @@ const BookingModal = ({ appoionData, date, setAppoionData }) => {
           <div className="mb-2  text-center">
             <input
               disabled
-              defaultValue={user?.displayName}
+              value={user?.displayName}
               type="text"
               placeholder="Full name"
               className="input input-bordered w-full max-w-sm"
@@ -63,7 +63,7 @@ const BookingModal = ({ appoionData, date, setAppoionData }) => {
           <div className="mb-2  text-center">
             <input
               disabled
-              defaultValue={user?.email}
+              value={user?.email}
               type="email"
               placeholder="Email"
               className="input input-bordered w-full max-w-sm"
