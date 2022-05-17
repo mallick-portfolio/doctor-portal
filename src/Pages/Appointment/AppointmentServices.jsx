@@ -5,7 +5,7 @@ import AppointmentCard from "./AppointmentCard.jsx";
 const AppointmentServices = ({ date,getCategory }) => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://peaceful-shore-69324.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

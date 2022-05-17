@@ -9,7 +9,7 @@ const AvailableAppointment = ({ serchCategory, date }) => {
   useEffect(() => {
     const loadServices = async () => {
       const selectedData = await axios.get(
-        `http://localhost:5000/services/${
+        `https://peaceful-shore-69324.herokuapp.com/services/${
           serchCategory ? serchCategory : "dental"
         }`
       );
