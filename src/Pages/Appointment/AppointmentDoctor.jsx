@@ -1,11 +1,12 @@
 import React from "react";
+import BookingModal from "./BookingModal.jsx";
 
-const AppointmentDoctor = ({ data, setAppoionData }) => {
-  const { slots, slotname } = data;
+const AppointmentDoctor = ({ data, date }) => {
+  const { name, slots } = data;
   return (
     <div className="card bg-base-100 shadow-xl">
       <div className="card-body">
-        <h2 className="text-2xl text-secondary text-center">{slotname}</h2>
+        <h2 className="text-2xl text-secondary text-center">{name}</h2>
         <p
           className={`text-xl text-center ${
             slots.length ? "text-accent" : "text-red-500"
@@ -14,7 +15,7 @@ const AppointmentDoctor = ({ data, setAppoionData }) => {
           {slots.length ? slots[0] : "No Slot Available"}
         </p>
         <div className="text-center mt-4">
-          <button onClick={() => setAppoionData(slots)}>
+          <button >
             <label
               htmlFor="booking-modal"
               disabled={slots.length === 0}
@@ -28,6 +29,14 @@ const AppointmentDoctor = ({ data, setAppoionData }) => {
             </label>
           </button>
         </div>
+      </div>
+      <div>
+        {data && (
+          <BookingModal
+            date={date}
+            data={data}
+          />
+        )}
       </div>
     </div>
   );

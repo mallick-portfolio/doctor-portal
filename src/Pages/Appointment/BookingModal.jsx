@@ -4,15 +4,11 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import auth from "../../firebase.init.js";
 
-const BookingModal = ({ appoionData, date, setAppoionData }) => {
-  const {
-    register,
-    handleSubmit,
-  } = useForm();
+const BookingModal = ({ data, date }) => {
+  const { register, handleSubmit } = useForm();
   const [user] = useAuthState(auth);
   const onSubmit = async (data, e) => {
     console.log(data);
-    setAppoionData(null)
   };
 
   return (
@@ -39,12 +35,12 @@ const BookingModal = ({ appoionData, date, setAppoionData }) => {
             <select
               {...register("time", {
                 required: true,
-                value: appoionData[0],
+                value: data[0],
               })}
               className="select select-bordered w-full max-w-sm"
             >
-              {appoionData &&
-                appoionData.map((data, i) => (
+              {data &&
+                data?.slots.map((data, i) => (
                   <option value={data} key={i}>
                     {data}
                   </option>

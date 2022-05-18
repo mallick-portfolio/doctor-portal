@@ -6,16 +6,13 @@ import AvailableAppointment from "./AvailableAppointment.jsx";
 
 const Appointment = () => {
   const [date, setDate] = useState(new Date());
-  const [serchCategory, setSearchCategory] = useState("");
-  const getCategory = (name) => {
-    setSearchCategory(name)
-  }
+
    
   return (
     <div className="">
       <AppointmentBanner date={date} setDate={setDate} />
-      <AppointmentServices getCategory={getCategory} date={date} />
-      <AvailableAppointment date={date} serchCategory={serchCategory} />
+      <AppointmentServices date={date} />
+      <AvailableAppointment date={date} />
       <Footer />
     </div>
   );

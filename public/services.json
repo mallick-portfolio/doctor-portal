@@ -1,240 +1,134 @@
 [
   {
     "_id": 1,
-    "title": "Teeth Orthodontics",
-    "category": "orthodontics",
-    "dataslot": [
-      {
-        "slotname": "Teeth Orthodontics",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "8:30 AM - 9:00 AM",
-          "9:00 AM - 9:30 AM",
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Cosmetic Dentistry",
-        "slots": ["10:00 AM - 10:30 AM", "10:30 AM - 11:00 AM"]
-      },
-      {
-        "slotname": "Teeth Cleaning",
-        "slots": [
-          "9:00 AM - 9:30 AM",
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Teeth Orthodontics",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "8:30 AM - 9:00 AM",
-          "9:00 AM - 9:30 AM",
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Cosmetic Dentistry",
-        "slots": ["10:00 AM - 10:30 AM", "10:30 AM - 11:00 AM"]
-      },
-      {
-        "slotname": "Teeth Cleaning",
-        "slots": [
-          "9:00 AM - 9:30 AM",
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      }
+    "name": "Teeth Orthodontics",
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
     "_id": 2,
-    "title": "Cosmetic Dentistry",
-    "category": "dentistry",
-    "dataslot": [
-      {
-        "slotname": "Teeth Orthodontics",
-        "slots": ["10:30 AM - 11:00 AM"]
-      },
-      {
-        "slotname": "Cosmetic Dentistry",
-        "slots": ["8:00 AM - 8:30 AM"]
-      },
-      {
-        "slotname": "Teeth Cleaning",
-        "slots": ["8:00 AM - 8:30 AM", "8:30 AM - 9:00 AM", "9:00 AM - 9:30 AM"]
-      }
+    "name": "Cosmetic Dentistry",
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
     "_id": 3,
-    "title": "Teeth Cleaning",
-    "category": "cleaning",
-    "dataslot": [
-      {
-        "slotname": "Teeth Orthodontics",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "8:30 AM - 9:00 AM",
-          "9:00 AM - 9:30 AM",
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Cosmetic Dentistry",
-        "slots": [
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Teeth Cleaning",
-        "slots": ["8:00 AM - 8:30 AM"]
-      },
-      {
-        "slotname": "Teeth Orthodontics",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "8:30 AM - 9:00 AM",
-          "9:00 AM - 9:30 AM",
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Cosmetic Dentistry",
-        "slots": [
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Teeth Cleaning",
-        "slots": ["8:00 AM - 8:30 AM"]
-      }
+    "name": "Teeth Cleaning",
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
     "_id": 4,
-    "title": "Cavity Protection",
-    "category": "protection",
-    "dataslot": [
-      {
-        "slotname": "Teeth Orthodontics",
-        "slots": ["8:00 AM - 8:30 AM"]
-      },
-      {
-        "slotname": "Cosmetic Dentistry",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Teeth Cleaning",
-        "slots": ["8:00 AM - 8:30 AM"]
-      }
+    "name": "Cavity Protection",
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
     "_id": 5,
-    "title": "Pediatric Dental",
-    "category": "dental",
-    "dataslot": [
-      {
-        "slotname": "Teeth Orthodontics",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "8:30 AM - 9:00 AM",
-          "9:00 AM - 9:30 AM",
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Cosmetic Dentistry",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "8:30 AM - 9:00 AM",
-          "9:00 AM - 9:30 AM",
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Teeth Cleaning",
-        "slots": ["8:00 AM - 8:30 AM"]
-      }
+    "name": "Pediatric Dental",
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   },
   {
     "_id": 6,
-    "title": "Oral Surgery",
-    "category": "surgery",
-    "dataslot": [
-      {
-        "slotname": "Teeth Orthodontics",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "8:30 AM - 9:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Cosmetic Dentistry",
-        "slots": ["8:00 AM - 8:30 AM"]
-      },
-      {
-        "slotname": "Teeth Cleaning",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "8:30 AM - 9:00 AM",
-          "9:00 AM - 9:30 AM",
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Teeth Orthodontics",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "8:30 AM - 9:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      },
-      {
-        "slotname": "Cosmetic Dentistry",
-        "slots": ["8:00 AM - 8:30 AM"]
-      },
-      {
-        "slotname": "Teeth Cleaning",
-        "slots": [
-          "8:00 AM - 8:30 AM",
-          "8:30 AM - 9:00 AM",
-          "9:00 AM - 9:30 AM",
-          "9:30 AM - 10:00 AM",
-          "10:00 AM - 10:30 AM",
-          "10:30 AM - 11:00 AM"
-        ]
-      }
+    "name": "Oral Surgery",
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
     ]
   }
 ]
