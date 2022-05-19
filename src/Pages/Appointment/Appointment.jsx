@@ -1,8 +1,7 @@
 import React, {  useState } from "react";
 import Footer from "../Shared/Footer.jsx";
 import AppointmentBanner from "./AppointmentBanner.jsx";
-import AppointmentServices from "./AppointmentServices.jsx";
-import AvailableAppointment from "./AvailableAppointment.jsx";
+import AvailableAppoinment from "./AvailableAppoinment.jsx";
 
 const Appointment = () => {
   const [date, setDate] = useState(new Date());
@@ -11,8 +10,7 @@ const Appointment = () => {
   return (
     <div className="">
       <AppointmentBanner date={date} setDate={setDate} />
-      <AppointmentServices date={date} />
-      <AvailableAppointment date={date} />
+      <AvailableAppoinment date={date} />
       <Footer />
     </div>
   );

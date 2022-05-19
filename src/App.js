@@ -8,6 +8,9 @@ import Register from "./Pages/Login/Register.jsx";
 import RequireAuth from "./Pages/Shared/RequireAuth.jsx";
 import "react-toastify/dist/ReactToastify.css";
 import About from "./Pages/About/About.jsx";
+import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
+import MyAppoinment from "./Pages/Dashboard/MyAppoinment.jsx";
+import MyReview from "./Pages/Dashboard/MyReview.jsx";
 function App() {
   return (
     <div className="lg:max-w-7xl mx-auto container overflow-hidden">
@@ -24,6 +27,17 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<MyAppoinment />} />
+          <Route path="review" element={<MyReview />} />
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
