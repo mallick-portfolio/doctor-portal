@@ -11,7 +11,10 @@ import About from "./Pages/About/About.jsx";
 import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
 import MyAppoinment from "./Pages/Dashboard/MyAppoinment.jsx";
 import MyReview from "./Pages/Dashboard/MyReview.jsx";
+import AllUsers from "./Pages/Dashboard/AllUsers.jsx";
 function App() {
+
+
   return (
     <div className="lg:max-w-7xl mx-auto container overflow-hidden">
       <ToastContainer autoClose={2000} />
@@ -37,6 +40,7 @@ function App() {
         >
           <Route index element={<MyAppoinment />} />
           <Route path="review" element={<MyReview />} />
+          <Route path="all-users" element={<AllUsers />} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
